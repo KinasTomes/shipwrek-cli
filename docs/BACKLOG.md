@@ -41,12 +41,12 @@ graph TD
 
 | Task ID | Tiêu đề Task | Mô tả chi tiết | Priority | Prerequisites | SP | Status |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
-| **TSK-101** | Define Board & Coordinate Data Models | Tạo struct `Coordinate(X, Y)`, `Board(10x10)`, `CellState` (Empty, Ship, Hit, Miss) trong `internal/game/board.go` | **P0** | None | 2 | `[ ]` |
-| **TSK-102** | Define Ship & Fleet Structs | Tạo struct `Ship` (Type, Length, Coordinates, Hits) và danh sách 5 loại tàu tiêu chuẩn trong `internal/game/ship.go` | **P0** | TSK-101 | 2 | `[ ]` |
-| **TSK-103** | Ship Placement Rules & Validation | Viết logic validate vị trí đặt tàu (`CanPlaceShip`): kiểm tra ranh giới cờ $10 \times 10$, va chạm trùng lặp, xoay tàu ngang/dọc trong `internal/game/rules.go` | **P0** | TSK-102 | 3 | `[ ]` |
-| **TSK-104** | Shooting & Hit Engine Logic | Viết hàm `ReceiveShot(coord)`: cập nhật trạng thái ô bàn cờ, ghi nhận Hit/Miss, kiểm tra tàu chìm (`IsSunk`) và đếm số tàu còn lại | **P0** | TSK-103 | 3 | `[ ]` |
-| **TSK-105** | Match State Machine & Turn Manager | Quản lý trạng thái trận đấu (`MatchState`: Setup, PlayerTurn, EnemyTurn, GameOver) trong `internal/game/match.go` | **P0** | TSK-104 | 3 | `[ ]` |
-| **TSK-106** | Unit Tests for Engine | Viết Unit Test phủ toàn bộ case: đặt tàu đè nhau, bắn trúng/trượt, đánh chìm hạm đội và điều kiện thắng | **P1** | TSK-105 | 2 | `[ ]` |
+| **TSK-101** | Define Board & Coordinate Data Models | Tạo struct `Coordinate(X, Y)`, `Board(10x10)`, `CellState` (Empty, Ship, Hit, Miss) trong `internal/game/board.go` | **P0** | None | 2 | `[x]` |
+| **TSK-102** | Define Ship & Fleet Structs | Tạo struct `Ship` (Type, Length, Coordinates, Hits) và danh sách 5 loại tàu tiêu chuẩn trong `internal/game/ship.go` | **P0** | TSK-101 | 2 | `[x]` |
+| **TSK-103** | Ship Placement Rules & Validation | Viết logic validate vị trí đặt tàu (`CanPlaceShip`): kiểm tra ranh giới cờ $10 \times 10$, va chạm trùng lặp, xoay tàu ngang/dọc trong `internal/game/rules.go` | **P0** | TSK-102 | 3 | `[x]` |
+| **TSK-104** | Shooting & Hit Engine Logic | Viết hàm `ReceiveShot(coord)`: cập nhật trạng thái ô bàn cờ, ghi nhận Hit/Miss, kiểm tra tàu chìm (`IsSunk`) và đếm số tàu còn lại | **P0** | TSK-103 | 3 | `[x]` |
+| **TSK-105** | Match State Machine & Turn Manager | Quản lý trạng thái trận đấu (`MatchState`: Setup, PlayerTurn, EnemyTurn, GameOver) trong `internal/game/match.go` | **P0** | TSK-104 | 3 | `[x]` |
+| **TSK-106** | Unit Tests for Engine | Viết Unit Test phủ toàn bộ case: đặt tàu đè nhau, bắn trúng/trượt, đánh chìm hạm đội và điều kiện thắng | **P1** | TSK-105 | 2 | `[x]` |
 
 ---
 
